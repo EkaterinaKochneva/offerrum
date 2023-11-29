@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+  <title>Главная</title>
+  
+  <link rel="icon" href="assets/favicon/favicon.svg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+</head>
+
+  <body>
+    <div class="wrapper">
+
+      <header class="header">
+  <div class="container">
+    <div class="header__content">
+      <a href="/" class="logo header__logo">
+        <img src="assets/img/icons/logo.svg" alt="Логотип">     
+      </a> 
+      <nav class="header__nav top-menu">
+        <ul class="top-menu__list">
+          <li class="top-menu__item"><a href="#" class="top-menu__link">Главная</a></li>
+          <li class="top-menu__item"><a href="#" class="top-menu__link">Что даст обучение</a></li>
+        </ul>
+        <a class="top-menu__btn button-secondary" href="#">Личный кабинет</a>
+      </nav> 
+      <button class="header__burger burger" type="button">
+        <span>Меню</span>
+      </button> 
+    </div>     
+  </div>
+</header>
+
+      <main>
+        <section class="hero">
+  <div class="container">
+    <div class="hero__content">
+      <h1 class="hero__title">Не упусти возможность войти в <span>прибыльную нишу</span></h1>
+      <picture class="hero__img" >
+        <source media="(min-width: 767px)" type="image/webp" srcset="assets/img/man.webp">
+        <source media="(min-width: 767px)" srcset="assets/img/man.png">        
+        <source type="image/webp" srcset="assets/img/man-mobile.webp">
+        <img src="assets/img/man-mobile.png" alt="">
+      </picture>
+      <p class="hero__desc">Получи все нужные навыки для заработка на NFT всего за 28 дней!</p>
+      <button class="hero__button button" data-modal="modal-1">Начать зарабатывать на NFT</button>
+    </div>
+  </div>
+</section>
+        <section class="benefits">
+  <div class="container">
+    <div class="benefits__wrapper">
+      <h2 class="benefits__title">Что даст тебе обучение?</h2>
+      <ul class="benefits__cards">
+        <li class="benefits__item">
+          <div class="benefits__content">
+            <img class="benefits__img" src="assets/img/icons/smile-1.png" alt="">
+            <p class="benefits__desc">Откроешь свой первый криптокошелек и научишься с ним работать</p>
+          </div>          
+        </li>
+        <li class="benefits__item">
+          <div class="benefits__content">
+            <img  class="benefits__img" src="assets/img/icons/smile-2.png" alt="">
+            <p class="benefits__desc">Поймёшь, как выбирать правильные дропы</p>
+          </div>          
+        </li>
+        <li class="benefits__item">
+          <div class="benefits__content">
+            <img  class="benefits__img" src="assets/img/icons/smile-3.png" alt="">
+            <p class="benefits__desc">Построишь план по быстрому приумножению заработанных средств</p>
+          </div>          
+        </li>
+        <li class="benefits__item">
+          <div class="benefits__content">
+            <img  class="benefits__img" src="assets/img/icons/smile-4.png" alt="">
+            <p class="benefits__desc">Узнаешь кто такие холдеры и флипперы</p>
+          </div>          
+        </li>
+      </ul>
+      <img class="benefits__decor-1" src="assets/img/icons/ellipse-blue.svg" alt="">
+      <img class="benefits__decor-2" src="assets/img/icons/ellipse-purple.svg" alt="">
+      <img class="benefits__decor-3" src="assets/img/icons/ellipse-purple-blur.svg" alt="">
+    </div>
+  </div>
+</section>
+
+      </main> 
+
+      <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-modal-close>
+    <div class="modal__container" role="dialog" aria-modal="true">
+      <div class="modal__content">
+        <header class="modal__header">
+          <h2 class="modal__title">
+            Начни прямо сейчас!
+          </h2>
+          <button class="modal__close" aria-label="Закрыть окно" data-modal-close></button>
+        </header>
+        <div class="modal__desc">
+          <p>Получи все нужные навыки для заработка на NFT всего за 28 дней!</p>
+        </div>
+        <form class="modal__form">
+          <label class="modal__input input">
+            <input class="input__native" type="email" name="email" placeholder="Ваш email"> 
+            <span class="input__lable hidden">Почта</span>
+          </label>        
+          <button class="modal__button button" type="button">Оплатить</button>
+        </form>
+      </div>      
+    </div>
+  </div>
+</div>
+
+<script src="assets/lib/lib.js"></script>
+<script src="assets/js/scripts.min.js"></script>
+
+    </div>
+
+  </body>
+</html>
