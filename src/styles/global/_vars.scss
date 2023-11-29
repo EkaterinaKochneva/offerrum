@@ -2,14 +2,17 @@
 $black: #000;
 $white: #fff;
 
-$main-text-color: #000;
-$main-bg-color: #fff;
+$main-text-color: #fff;
+$secondary-text-color: #CECECE;
+$main-bg-color: #1D2532;
+$bg-color: #293344;
+$grey-color: #757575;
 
-$main-accent-color: red;
+$main-accent-color: #C3F33B;
 
 // fonts
-$main-font-family: "Roboto", sans-serif;
-$main-font-size: 14px;
+$main-font-family: "Inter", sans-serif;
+$main-font-size: 16px;
 
 // container
 $container-max-width-xs: 100%;
@@ -17,12 +20,11 @@ $container-max-width-sm: 540px;
 $container-max-width-md: 720px;
 $container-max-width-lg: 960px;
 $container-max-width-xl: 1140px;
-$container-max-width-xxl: 1320px;
+$container-max-width-xxl: 1310px;
 
 $grid-gap-side: 15px;
 
 // breakpoints
-$bp-xs: 413px;
 $bp-sm: 575px;
 $bp-md: 767px;
 $bp-lg: 991px;

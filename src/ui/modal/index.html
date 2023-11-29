@@ -1,21 +1,24 @@
 <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
   <div class="modal__overlay" tabindex="-1" data-modal-close>
-    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-      <header class="modal__header">
-        <h2 class="modal__title" id="modal-1-title">
-          Micromodal
-        </h2>
-        <button class="modal__close" aria-label="Close modal" data-modal-close></button>
-      </header>
-      <main class="modal__content" id="modal-1-content">
-        <p>
-          Try hitting the <code>tab</code> key and notice how the focus stays within the modal itself. Also, <code>esc</code> to close modal.
-        </p>
-      </main>
-      <footer class="modal__footer">
-        <button class="button modal__btn-primary">Continue</button>
-        <button class="button modal__btn" data-modal-close aria-label="Close this dialog window">Close</button>
-      </footer>
+    <div class="modal__container" role="dialog" aria-modal="true">
+      <div class="modal__content">
+        <header class="modal__header">
+          <h2 class="modal__title">
+            Начни прямо сейчас!
+          </h2>
+          <button class="modal__close" aria-label="Закрыть окно" data-modal-close></button>
+        </header>
+        <div class="modal__desc">
+          <p>Получи все нужные навыки для заработка на NFT всего за 28 дней!</p>
+        </div>
+        <form class="modal__form">
+          <label class="modal__input input">
+            <input class="input__native" type="email" name="email" placeholder="Ваш email"> 
+            <span class="input__lable hidden">Почта</span>
+          </label>        
+          <button class="modal__button button" type="button">Оплатить</button>
+        </form>
+      </div>      
     </div>
   </div>
 </div>

@@ -3,47 +3,70 @@
 @import 'src/styles/global/vars';
 
 .button {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 32px;
-  min-height: 44px;
-  border-radius: 4px;
-  background: $main-accent-color;
-  color: $white;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  padding: 20px 30px;
+  border-radius: 20px;
+  background: linear-gradient(93deg, #1DD844 1.44%, #CBF62E 126.29%);
+  box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.25);
+  color: $main-bg-color;
+  font-family: 'GTWalsheimPro';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
   transition: all .2s ease-in-out;
 
-  &:hover, &:active {
-    background: black;
+  @media only screen and (max-width: $bp-sm){
+    font-size: 16px; 
+    padding: 15px 20px;
+    border-radius: 15px;
+  }
+
+  &::before {
+    content:"";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(93deg, #1DD844 1.44%, #CBF62E 126.29%);
+    filter: blur(8px);
+    border-radius: inherit;
+    transition: filter .2s ease-in-out;
+  }
+
+  &:hover::before {
+    filter: blur(19.5px);
   }
 
   &:disabled {
-    opacity: 0.4;
+    box-shadow: unset;
+    color: rgba(36, 36, 36, 0.50);
   }
+}
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 22px;
+  border: 1px solid $white;
+  border-radius: 15px;
+  background: transparent;
+  color: $white;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  transition: all .2s ease-in-out;
 
-  &--lg {
-    padding: 5px 40px;
-    min-height: 52px;
-  }
-
-  &--sm {
-    padding: 5px 24px;
-    min-height: 36px;
-  }
-
-  &--border {
-    border: 1px solid $main-accent-color;
-    background: transparent;
+  &:hover {
     color: $main-accent-color;
-
-    &:hover, &:active {
-      background: $main-accent-color;
-      color: $white;
-    }
+    border-color: $main-accent-color;
+  }
+  &:active {
+    color: $main-accent-color;
+    border-color: $main-accent-color;
+    background: rgba(224, 255, 172, 0.05);
+    backdrop-filter: blur(7.5px);
   }
 
 }

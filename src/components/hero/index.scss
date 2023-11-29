@@ -1,0 +1,118 @@
+@import 'src/styles/global/vars';
+
+.hero {
+  position: relative;
+  padding: 115px 0 100px;
+  min-height: 1030px;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -189px;
+    left: 15px;
+    z-index: -1;
+    width: 415px;
+    height: 415px;
+    transform: rotate(12deg);
+    border-radius: 415px;
+    background: linear-gradient(171deg, rgba(95, 56, 255, 0.35) 25.59%, rgba(255, 14, 222, 0.35) 100.44%);
+    filter: blur(86px);
+
+    @media only screen and (max-width: $bp-sm){
+      width: 238px;
+      height: 238px; 
+      top: -101px;
+      left: -105px;
+    }
+  }
+
+  @media only screen and (max-width: $bp-xl){
+     min-height: 800px; 
+  }
+
+  @media only screen and (max-width: $bp-md){
+    min-height: unset;
+    padding: 64px 0 50px; 
+  }
+
+  &__content {
+    position: relative;
+    padding-top: 15%;
+
+    @media only screen and (max-width: $bp-sm){
+       text-align: center; 
+    }
+  }
+
+  &__title {
+    max-width: 717px;
+
+    @media only screen and (max-width: $bp-lg){
+       max-width: 500px; 
+    }
+  }
+
+  &__img {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    right: -108px;
+    top: 50%;
+    transform: translateY(-33%);
+    max-width: 75%;
+    width: 930px;
+
+    @media only screen and (max-width: $bp-md){
+       position: relative;
+       max-width: unset;
+       aspect-ratio: 1;
+       max-height: 400px;
+       width: 100%; 
+       margin-top: 16px;       
+       left: 0;
+       right: unset;
+       transform: unset;
+    }
+
+    @media only screen and (max-width: $bp-sm){
+      width: 120%;      
+      left: -25px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__desc {
+    max-width: 500px;
+    margin-top: 30px;
+    font-size: 23px;
+    line-height: 120%;
+
+    @media only screen and (max-width: $bp-md){
+       margin-top: 15px; 
+    }
+
+    @media only screen and (max-width: $bp-sm){
+      max-width: 240px;
+      font-size: 18px; 
+      margin: 8px auto 0;
+    }
+  }
+
+  &__button {
+    margin-top: 75px;
+
+    @media only screen and (max-width: $bp-md){
+       margin-top: 50px; 
+    }
+
+    @media only screen and (max-width: $bp-sm){
+       width: 100%; 
+       margin-top: 38px;
+    }
+  }
+}

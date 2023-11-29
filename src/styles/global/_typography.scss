@@ -6,20 +6,36 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1, .h1{
-  font-weight: 700;
-  font-size: 32px;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 105%;
+  letter-spacing: -2.16px;
+
+  span {
+    font-weight: 700;
+  }
+
+  @media only screen and (max-width: $bp-xl){
+    font-size: calc(1.8rem + 2.5vw); 
+  }
   
-  @media only screen and (max-width: $bp-lg){
-      
+  @media only screen and (max-width: $bp-sm){
+      font-size: 25px;
+      letter-spacing: -0.75px;
   }
 }
 
 h2, .h2{
-  font-weight: 700;
-  font-size: 28px;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 130%;
 
-  @media only screen and (max-width: $bp-lg){
-      
+  @media only screen and (max-width: $bp-xl){
+    font-size: 32px
+  }
+
+  @media only screen and (max-width: $bp-sm){
+    font-size: 23px;
   }
 }
 

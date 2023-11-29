@@ -1,4 +1,8 @@
 @import '../mixins/fonts.scss';
 
-// Пример подключения:
-// @include fonts("Manrope", "Manrope-Medium", 500);
+@include fonts("Inter", "Inter-Regular", 400);
+@include fonts("Inter", "Inter-Medium", 500);
+@include fonts("Inter", "Inter-SemiBold", 600);
+@include fonts("Inter", "Inter-Bold", 700);
+
+@include fonts("GTWalsheimPro", "GTWalsheimPro-Medium", 500);

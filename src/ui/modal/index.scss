@@ -14,8 +14,7 @@
   
   &[aria-hidden="true"] .modal__container {
     animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1), mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
-  }
-  
+  }  
 
   &__overlay {
     position: fixed;
@@ -27,13 +26,52 @@
   }
 
   &__container {
-    background-color: $white;
-    padding: 30px;
-    max-width: 500px;
+    border-radius: 30px;
+    background: radial-gradient(207.54% 112.44% at 15.58% -40.39%, #323E51 0%, #1D2532 100%);
+    max-width: 670px;
     max-height: 100vh;
-    border-radius: 4px;
+    border-radius: 30px;
+    color: $white;
     overflow-y: auto;
-    will-change: transform;
+    will-change: transform; 
+    
+    @media only screen and (max-width: $bp-sm){
+       border-radius: 20px; 
+       background: #2B3647;
+    }
+  }
+
+  &__content {
+    position: relative;
+    overflow: hidden;
+    padding: 56px 128px 90px 71px;
+
+    @media only screen and (max-width: $bp-sm){
+      padding: 45px 16px 40px 16px; 
+   }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -95px;
+      right: -163px;
+      z-index: -1;
+      width: 425px;
+      height: 386px;
+      transform: rotate(12deg);
+      border-radius: 424.927px;
+      background: linear-gradient(171deg, rgba(195, 243, 58, 0.25) 25.59%, rgba(41, 209, 89, 0.25) 100.44%);
+      filter: blur(86px);
+      
+      @media only screen and (max-width: $bp-sm){
+        width: 288px;
+        height: 262px;
+        transform: rotate(12deg);
+        border-radius: 288px;
+        right: -144px;
+        top: 137px;
+      }
+    }
   }
 
   &__header {
@@ -43,29 +81,63 @@
   }
 
   &__title {
-  }
+    line-height: 105%;
+    font-weight: 700;
+    letter-spacing: -1.35px;
 
-  &__close {
-    background: transparent;
-    border: 0;
-
-    &::before {
-      content: "\2715"; 
+    @media only screen and (max-width: $bp-sm){
+       line-height: 130%; 
+       letter-spacing: unset;
     }
   }
 
-  &__content {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+  &__close {
+    position: absolute;
+    top: 34px;
+    right: 40px;
+    z-index: 5;
+    width: 45px;
+    height: 45px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='45' height='45' viewBox='0 0 45 45' fill='none'%3E%3Cpath d='M25.1439 22.5L33.2064 14.4562C33.5594 14.1032 33.7578 13.6243 33.7578 13.125C33.7578 12.6257 33.5594 12.1468 33.2064 11.7937C32.8533 11.4407 32.3744 11.2423 31.8751 11.2423C31.3758 11.2423 30.897 11.4407 30.5439 11.7937L22.5001 19.8562L14.4564 11.7937C14.1033 11.4407 13.6244 11.2423 13.1251 11.2423C12.6258 11.2423 12.1469 11.4407 11.7939 11.7937C11.4408 12.1468 11.2425 12.6257 11.2425 13.125C11.2425 13.6243 11.4408 14.1032 11.7939 14.4562L19.8564 22.5L11.7939 30.5437C11.6181 30.718 11.4787 30.9254 11.3835 31.1539C11.2883 31.3824 11.2393 31.6275 11.2393 31.875C11.2393 32.1225 11.2883 32.3676 11.3835 32.5961C11.4787 32.8245 11.6181 33.0319 11.7939 33.2062C11.9682 33.382 12.1756 33.5215 12.404 33.6167C12.6325 33.7118 12.8776 33.7609 13.1251 33.7609C13.3727 33.7609 13.6177 33.7118 13.8462 33.6167C14.0747 33.5215 14.2821 33.382 14.4564 33.2062L22.5001 25.1437L30.5439 33.2062C30.7182 33.382 30.9256 33.5215 31.154 33.6167C31.3825 33.7118 31.6276 33.7609 31.8751 33.7609C32.1227 33.7609 32.3677 33.7118 32.5962 33.6167C32.8247 33.5215 33.0321 33.382 33.2064 33.2062C33.3821 33.0319 33.5216 32.8245 33.6168 32.5961C33.712 32.3676 33.761 32.1225 33.761 31.875C33.761 31.6275 33.712 31.3824 33.6168 31.1539C33.5216 30.9254 33.3821 30.718 33.2064 30.5437L25.1439 22.5Z' fill='white'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @media only screen and (max-width: $bp-sm){
+       top: 16px;
+       right: 16px; 
+       width: 34px;
+       height: 34px;
+    }
   }
 
-  &__footer {
+  &__desc {
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 120%;
+    margin-top: 25px;
+
+    @media only screen and (max-width: $bp-sm){
+      font-size: 18px;
+      margin-top: 15px; 
+    }
   }
 
-  &__btn-primary {
+  &__form {
+    margin-top: 35px;
+
+    @media only screen and (max-width: $bp-sm){
+       margin-top: 25px; 
+    }
   }
 
-  &__btn {
+  &__button {
+    font-family: "Inter";
+    border-radius: 10px;
+    padding: 15px 20px;
+    width: 100%;
+    margin-top: 18px;
+    font-size: 18px;
   }
 }
 
